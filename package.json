@@ -1,0 +1,32 @@
+{
+  "name": "momenta",
+  "version": "1.0.0",
+  "description": "A wordpress theme",
+  "author": "Sabbir Hasan",
+  "license": "GPLv2",
+  "private": false,
+  "scripts": {
+    "dev": "gulp",
+    "clean": "gulp clean",
+    "translate": "gulp translate",
+    "zip": "cd ../ && zip -r $npm_package_name.zip $npm_package_name -x '*/.*' -x '*.zip*' -x '*.git*' -x '*/.editorconfig/*' -x '*/gulpfile.js' -x '*/yarn.lock' -x '*/package.json' -x '*/package-lock.json' -x '**/node_modules/*' -x '*/.vscode/*' -x '*/assets/dev/*' && mv $npm_package_name.zip $npm_package_name-v$npm_package_version.zip && cd happy-elementor-addons"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-plumber-notifier": "^0.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-wp-pot": "^2.5.0",
+    "gulp-zip": "^5.1.0",
+    "sass": "^1.49.7"
+  }
+}
