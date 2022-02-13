@@ -1849,7 +1849,10 @@ html
 
 body
 {
-    background: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+
+    min-height: 2000px;
     /* Fallback for when there is no custom background color defined. */
 }
 
@@ -1877,6 +1880,251 @@ body
     content: '';
 }
 
+/*--------------------------------------------------------------
+12.1 Header
+--------------------------------------------------------------*/
+.site-header
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 100%;
+    height: -webkit-fit-content;
+    height:    -moz-fit-content;
+    height:         fit-content;
+
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+
+    color: #67788a;
+    background-color: #fff;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+.site-header .header-content
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: calc(100% - 128px);
+    height: 83px;
+    padding: 0 46px;
+
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.site-header .header-content .branding
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.site-header .header-content .branding a
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-fit-content;
+    width:    -moz-fit-content;
+    width:         fit-content;
+    height: 18px;
+    min-height: calc(1.33em + 3px);
+    margin: auto 0;
+
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: #000;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.site-header .header-content nav
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    height: 100%;
+}
+.site-header .header-content nav ul
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin: auto;
+
+    list-style: none;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.site-header .header-content nav ul li
+{
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+}
+.site-header .header-content nav ul li:hover
+{
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+
+    opacity: .5;
+}
+.site-header .header-content nav ul li.current-menu-item a
+{
+    font-weight: 700 !important;
+
+    border-bottom: 3px solid;
+}
+.site-header .header-content nav ul li a
+{
+    font-family: Optimistic Display Medium, Montserrat, Helvetica, Arial, Noto Sans;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 27px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-fit-content;
+    width:    -moz-fit-content;
+    width:         fit-content;
+    height: -webkit-fit-content;
+    height:    -moz-fit-content;
+    height:         fit-content;
+    min-height: calc(1.33em + 3px);
+    margin: 0 20px;
+
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    letter-spacing: 1px;
+    pointer-events: auto;
+
+    color: #1c2b33;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.site-header .header-content nav ul li a svg
+{
+    display: block;
+
+    margin: 0 0 0 10px;
+}
+
+#hero-banner
+{
+    display: grid;
+
+    background-color: #fbd6b7;
+
+    grid-template-columns: minmax(20px, calc((100% - 1320px) / 2)) 330fr 990fr minmax(20px, calc((100% - 1320px) / 2));
+    grid-template-rows: 84px 35fr 475fr 45fr;
+}
+#hero-banner .hero-title-container
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    -webkit-transition: all .95s cubic-bezier(.33, 0, 0, 1);
+            transition: all .95s cubic-bezier(.33, 0, 0, 1);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+    color: #a03516 !important;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    grid-column: 2/span 1;
+    grid-row: 3/span 2;
+    will-change: transform;
+}
+#hero-banner .hero-slider-wrap
+{
+    z-index: 1;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    overflow: hidden;
+
+    height: 100vh;
+    max-height: 475px;
+
+    background: #a03516;
+
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+            align-items: flex-end;
+    grid-column: 3/span 1;
+    grid-row: 3/span 2;
+}
+#hero-banner .hero-spacer
+{
+    background-color: #fff;
+
+    grid-column: 1/span 4;
+    grid-row: 4/span 1;
+}
+
+/*--------------------------------------------------------------
+12.6 Footer
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 13.0 Comments
 --------------------------------------------------------------*/

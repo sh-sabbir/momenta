@@ -1,3 +1,100 @@
 /*--------------------------------------------------------------
 12.1 Header
 --------------------------------------------------------------*/
+.site-header {
+    // background: rebeccapurple;
+    background-color: #fff;
+    color: #67788a;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: all .3s ease;
+    width: 100%;
+    z-index: 100;
+
+    .header-content {
+        display: flex;
+        height: 83px;
+        justify-content: space-between;
+        padding: 0 46px;
+        width: calc(100% - 128px);
+        // background: #d1d1d1;
+
+        .branding {
+            align-items: center;
+            display: flex;
+            transition: all .3s ease;
+
+            a {
+                transition: all .3s ease;
+                align-items: center;
+                display: flex;
+                height: 18px;
+                margin: auto 0;
+                white-space: nowrap;
+                box-sizing: border-box;
+                color: #000;
+                min-height: calc(1em + (1em * .33) + 3px);
+                text-decoration: none;
+                width: fit-content;
+            }
+        }
+
+        nav {
+            display: flex;
+            height: 100%;
+
+            ul {
+                align-items: center;
+                display: flex;
+                margin: auto;
+                list-style: none;
+
+                li {
+                    transition: all .3s ease;
+
+                    &:hover {
+                        transition: all .3s ease;
+                        opacity: 0.5;
+                    }
+
+                    &.current-menu-item {
+                        a {
+                            border-bottom: 3px solid;
+                            font-weight: 700 !important;
+                        }
+                    }
+
+                    a {
+                        transition: all .3s ease;
+                        color: #1c2b33;
+                        white-space: nowrap;
+                        margin: 0 20px;
+                        align-items: center;
+                        display: flex;
+                        height: fit-content;
+                        letter-spacing: 1px;
+                        pointer-events: auto;
+                        font-family: Optimistic Display Medium, Montserrat, Helvetica, Arial, Noto Sans;
+                        font-size: 18px;
+                        font-weight: normal;
+                        line-height: 27px;
+                        box-sizing: border-box;
+                        min-height: calc(1em + (1em * .33) + 3px);
+                        text-decoration: none;
+                        width: fit-content;
+
+
+                        svg {
+                            display: block;
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

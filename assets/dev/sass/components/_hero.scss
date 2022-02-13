@@ -1,0 +1,36 @@
+#hero-banner {
+    display: grid;
+    grid-template-columns: minmax(20px, calc((100% - 1320px) / 2)) 330fr 990fr minmax(20px, calc((100% - 1320px) / 2));
+    grid-template-rows: 84px 35fr 475fr 45fr;
+    background-color: #FBD6B7;
+
+    .hero-title-container {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 2;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all .95s cubic-bezier(.33, .00, .00, 1.00);
+        will-change: transform;
+        color: #A03516 !important;
+    }
+
+    .hero-slider-wrap {
+        align-items: flex-end;
+        display: flex;
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 2;
+        max-height: 475px;
+        height: 100vh;
+        overflow: hidden;
+        background: #A03516;
+        z-index: 1;
+    }
+
+    .hero-spacer {
+        background-color: #fff;
+        grid-column: 1 / span 4;
+        grid-row: 4 / span 1;
+    }
+}
