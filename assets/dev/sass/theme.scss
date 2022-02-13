@@ -1,3 +1,54 @@
-body{
-    clear: both;
-    }
+@import '_normalize';
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Accessibility
+3.0 Alignments
+4.0 Typography
+5.0 Forms
+6.0 Formatting
+7.0 Lists
+8.0 Tables
+9.0 Links
+10.0 Hover
+11.0 Navigation
+12.0 Layout
+   12.1 Header
+   12.2 Front Page
+   12.3 Regular Content
+   12.4 Posts
+   12.5 Pages
+   12.6 Footer
+13.0 Comments
+14.0 Widgets
+15.0 Media
+   15.1 Galleries
+16.0 Print
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
+
+@include normalize();
+@import '_accessibility';
+@import '_alignment';
+@import '_typography';
+@import '_form';
+@import '_formatting';
+@import '_list';
+@import '_table';
+@import '_links';
+@import '_navigation';
+@import '_layout';
+@import '_comment';
+@import '_widgets';
+@import '_media';
+@import '_print';
+
+body {
+    color: rebeccapurple;
+}
