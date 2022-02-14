@@ -42,3 +42,9 @@ body {
     content: "";
     display: block;
 }
+
+main {
+    padding: 0 calc((100% - 1320px) / 2);
+    display: flex;
+    margin-bottom: 50px;
+}
