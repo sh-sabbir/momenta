@@ -43,11 +43,26 @@
                     <h1>Featured Articles</h1>
                 </div>
                 <div class="hero-slider-wrap">
-                    
+
                 </div>
                 <div class="hero-spacer">
                 </div>
             </div>
+
+            <main>
+                <div id="post-list">
+                    <?php
+                    for ($i = 0; $i < 23; $i++) { ?>
+                        <article>
+                            <h2>Hola Amigo <?=$i+1?></h2>
+                        </article>
+    
+                    <?php
+                    }
+                    ?>
+                </div>
+            </main>
+
         </div>
         <footer id="colophon" class="site-footer">
 

@@ -25,7 +25,7 @@ const AUTOPREFIXER_BROWSERS = [
 	"bb >= 10",
 ];
 
-const sassFiles = "assets/dev/sass/*.scss";
+const sassFiles = "assets/dev/sass/**/*.scss";
 const jsFiles = "assets/dev/js/*.js";
 const terserConfig = {
 	toplevel: true,
@@ -43,7 +43,15 @@ function makeCSS() {
 		.pipe(dest("assets/css"))
 		.pipe(csso())
 		.pipe(rename({ suffix: ".min" }))
-		.pipe(dest("assets/css"));
+		.pipe(dest("assets/css"))
+		.on("end", function (error) {
+			if (error) {
+				// Handle errors if any
+				swallowError(error);
+			}
+			// // Signal that the task is over
+			// done();
+		});
 }
 
 function makeJS() {

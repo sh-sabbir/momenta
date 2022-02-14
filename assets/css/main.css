@@ -1880,6 +1880,17 @@ body
     content: '';
 }
 
+main
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-bottom: 50px;
+    padding: 0 calc((100% - 1320px) / 2);
+}
+
 /*--------------------------------------------------------------
 12.1 Header
 --------------------------------------------------------------*/
@@ -2120,6 +2131,76 @@ body
 
     grid-column: 1/span 4;
     grid-row: 4/span 1;
+}
+
+#post-list
+{
+    display: grid;
+
+    width: 100%;
+    margin: auto;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 70px;
+    grid-template-columns: repeat(12, 1fr);
+}
+#post-list article
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    min-height: 300px;
+
+    cursor: pointer;
+
+    background: #d4d4d4;
+}
+#post-list article:nth-child(1),
+#post-list article:nth-child(2),
+#post-list article:nth-child(3),
+#post-list article:nth-child(4),
+#post-list article:nth-child(6),
+#post-list article:nth-child(7),
+#post-list article:nth-child(8),
+#post-list article:nth-child(9)
+{
+    grid-column-end: span 4;
+}
+#post-list article:nth-child(5)
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    grid-column-end: span 8;
+    grid-row-end: span 2;
+}
+#post-list article:nth-child(10),
+#post-list article:nth-child(11)
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    grid-column-end: span 6;
+    grid-row-end: span 2;
+}
+#post-list article:nth-child(n+12)
+{
+    grid-column-end: span 3;
+    grid-row-end: span 1;
 }
 
 /*--------------------------------------------------------------
